@@ -17,7 +17,9 @@ addpath('utility','model','cf_scale','external/matconvnet/matlab');
 vl_setupnn();
 
 % Note that the default setting does not enable GPU
-% TO ENABLE GPU, recompile the MatConvNet toolbox  
 vl_compilenn();
+% TO ENABLE GPU, recompile the MatConvNet toolbox by removing the following
+% comment
+%vl_compilenn('enableGpu', true, 'cudaRoot', '/usr/local/cuda')
 
 run_tracker('MotorRolling', 1, 1);

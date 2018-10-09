@@ -28,7 +28,7 @@ interp_factor = 0.01;       % Model learning rate (see Eqn 6a, 6b)
 cell_size = 4;              % Spatial cell size
 
 global enableGPU;
-enableGPU = false;
+enableGPU = false; %true if Matconvnet compiled with GPU support
 
 switch video
     case 'choose',
