@@ -64,7 +64,7 @@ end
 
 % Initialize variables for calculating FPS and distance precision
 time      = 0;
-rects = zeros(numel(img_files), 4);
+positions = zeros(numel(img_files), 4);
 nweights  = reshape(nweights,1,1,[]);
 
 % Note: variables ending with 'f' are in the Fourier domain.
@@ -115,7 +115,7 @@ for frame = 1:numel(img_files),
     
     target_sz_t=target_sz*current_scale_factor;
     box = [pos([2,1]) - target_sz_t([2,1])/2, target_sz_t([2,1])];
-    rects(frame,:)=box;
+    positions(frame,:)=box;
 
     time = time + toc();
     
